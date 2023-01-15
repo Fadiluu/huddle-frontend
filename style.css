@@ -1,0 +1,89 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+img{
+    max-width: 100%;
+   
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    'head'
+    'sec'
+    'foot';
+    padding: 1em;
+}
+header{
+    display: grid;
+    grid-area: head;
+    grid-template-columns: repeat(2,1fr); 
+    
+   
+}
+.hero-img{
+    grid-row: 2;
+    grid-column: span 2;
+}
+.hero-p{
+    grid-column: span 2;
+}
+
+@media (min-width:42em){
+    header{
+        grid-template-areas: 
+        'logo tbtn'
+        'desc img';
+    }
+    .logo{
+        grid-area: logo;
+    }
+    .try-btn{
+        grid-area: tbtn;
+    }
+    .hero-p{
+        grid-area: desc;
+    }
+    .hero-img{
+        grid-area: img;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+    grid-area: sec;
+}
+footer{
+    grid-area: foot;
+}
