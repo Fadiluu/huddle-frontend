@@ -26,32 +26,79 @@ header{
     grid-area: head;
     
     grid-template-columns: repeat(2,1fr); 
-    gap: 2em;
-    
+    row-gap: 2em;
+    justify-content: center;
    
 }
 .hero-img{
     grid-row: 3;
     grid-column: span 2;
+    align-self: center;
+    object-fit: cover;
+    /* aspect-ratio: 2 / 1; */
 }
 .hero-p{
     grid-column: span 2;
+    padding: 0 2em; 
+    
     
 }
 
-.try-btn{
+.cta-try{
     justify-self: end;
-        
+    font-weight: 700;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
     color: black;
     padding: .5em 2em;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 50px;
     
 }
-@media (min-width:40em){
+.cta-get-started{
+    text-decoration: none;
+    color: white;
+    background-color: hsl(322, 100%, 66%);
+    border-radius: 50px;
+    font-weight: 700;
+    padding: 1.25em 5em;
+    font-size: clamp(0.75rem , 1.5vw, 1rem );
+
+    
+
+}
+
+
+.hero-p > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 6.5vw, 2.5rem);
+    text-align: center;
+    max-width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-p > p {
+    font-size: clamp(1.55rem, 2.5vw, 2rem);
+    margin: 2.5em auto;
+    max-width: 750px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:992px){
     html{
         font-size: 18px;
     }
@@ -72,13 +119,32 @@ header{
     }
     .hero-p{
         grid-area: desc;
+        padding:1em; 
     }
     .hero-img{
         grid-area: img;
     }
+    .hero-p > h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.25rem, 2.5vw, 3rem);
+        text-align: start;
+        max-width: 75%;
+        margin: 0;
+    }
+    .hero-p > p {
+        text-align: start;
+        max-width: 750px;
+        margin: 2.5em 0 ;
+        font-size: clamp(.25rem, 1.5vw, 3rem);
+    }
 }
 
-
+@media (max-width:991.9px){
+    .cta-div{
+        text-align: center;
+    }
+}
 
 
 
