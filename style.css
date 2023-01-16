@@ -26,7 +26,7 @@ header{
     grid-area: head;
     
     grid-template-columns: repeat(2,1fr); 
-    row-gap: 2em;
+    row-gap: 5em;
     justify-content: center;
    
 }
