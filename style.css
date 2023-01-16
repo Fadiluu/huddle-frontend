@@ -1,9 +1,12 @@
 *,*::before,*::after{
     box-sizing: border-box;
 }
-
+html{
+    font-size: 10px;
+}
 body{
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 img{
     max-width: 100%;
@@ -15,25 +18,47 @@ main{
     'head'
     'sec'
     'foot';
-    padding: 1em;
 }
 header{
+    background-image: url('images/bg-hero-mobile.svg');
+    padding: 2em;
     display: grid;
     grid-area: head;
+    
     grid-template-columns: repeat(2,1fr); 
+    gap: 2em;
     
    
 }
 .hero-img{
-    grid-row: 2;
+    grid-row: 3;
     grid-column: span 2;
 }
 .hero-p{
     grid-column: span 2;
+    
 }
 
-@media (min-width:42em){
+.try-btn{
+    justify-self: end;
+        
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding: .5em 2em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    
+}
+@media (min-width:40em){
+    html{
+        font-size: 18px;
+    }
     header{
+        padding: 3.5em;
+        background-image: url('images/bg-hero-desktop.svg');
+        grid-auto-columns: 1fr;
         grid-template-areas: 
         'logo tbtn'
         'desc img';
@@ -43,6 +68,7 @@ header{
     }
     .try-btn{
         grid-area: tbtn;
+        padding: .5em 4em;
     }
     .hero-p{
         grid-area: desc;
@@ -51,8 +77,6 @@ header{
         grid-area: img;
     }
 }
-
-
 
 
 
