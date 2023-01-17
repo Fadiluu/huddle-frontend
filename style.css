@@ -19,8 +19,13 @@ main{
     'sec'
     'foot';
 }
+
+/* hero-start */
+
+
 header{
     background-image: url('images/bg-hero-mobile.svg');
+    background-color:  hsl(193, 100%, 96%) ;
     padding: 2em;
     display: grid;
     grid-area: head;
@@ -85,8 +90,31 @@ header{
     text-align: center;
     
 }
+/* hero-end */
 
+/* section-start */
 
+.content{
+    padding: 0.75em;
+    max-width: 90%;
+    margin: 1.5em auto;
+}
+
+.feature-card{
+    border-radius: 15px;
+    margin-top: 3em;
+    padding: 3em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    text-align: center;
+}
+
+.exp > h3{
+    font-size: 2rem;
+}
+.exp > p{
+    font-size: clamp(1rem , 3.5vw , 2rem);
+    color: hsl(208, 11%, 55%);
+}
 
 
 
@@ -102,6 +130,7 @@ header{
     html{
         font-size: 18px;
     }
+    /* hero-start */
     header{
         padding: 3.5em;
         background-image: url('images/bg-hero-desktop.svg');
@@ -135,9 +164,39 @@ header{
     .hero-p > p {
         text-align: start;
         max-width: 750px;
-        margin: 2.5em 0 ;
+        margin: 3em 0 ;
         font-size: clamp(.25rem, 1.5vw, 3rem);
     }
+    /* hero-end */
+
+    /* section-start */
+    .feature-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5em;
+        text-align: start;
+        
+    }
+
+    .invert-card > .exp{
+        grid-column: 1 ;
+        grid-row: 1;
+    }
+    .invert-card > img{
+        grid-column: 2;
+    }
+    .exp{
+        align-self: center;
+        padding: 0 1em;
+    }
+    .exp > h3{
+        font-family:'Poppins', sans-serif ;
+    }
+    .exp > p{
+        font-size: clamp(1rem, 1.5vw , 1.25rem);
+    }
+
+    /* section-end */
 }
 
 @media (max-width:991.9px){
