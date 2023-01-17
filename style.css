@@ -187,7 +187,7 @@ header{
     }
     .exp{
         align-self: center;
-        padding: 0 1em;
+        padding: 0 em;
     }
     .exp > h3{
         font-family:'Poppins', sans-serif ;
