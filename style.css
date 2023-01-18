@@ -7,6 +7,7 @@ html{
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 img{
     max-width: 100%;
@@ -94,10 +95,17 @@ header{
 
 /* section-start */
 
+
+
+section{
+    grid-area: sec;
+}
+
 .content{
     padding: 0.75em;
     max-width: 90%;
     margin: 1.5em auto;
+    margin-bottom: 5em;
 }
 
 .feature-card{
@@ -109,6 +117,7 @@ header{
 }
 
 .exp > h3{
+    font-family:'Poppins', sans-serif ;
     font-size: 2rem;
 }
 .exp > p{
@@ -116,13 +125,90 @@ header{
     color: hsl(208, 11%, 55%);
 }
 
+/* section-end */
 
 
+.box{
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: 3em 0;
+    border-radius: 15px;
+    top: 5em;
+
+}
+.container{
+    /* padding: 0 0.5em; */
+}
+
+.card > h2{
+    margin-bottom: 1.75em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.5vw ,2rem);
+} 
+
+/* footer-start */
+
+footer{
+    background-color: hsl(192, 100%, 9%);
+}
+.footer-content{
+    /* margin-top: -9%; */
+    grid-area: foot;
+    background-color: hsl(192, 100%, 9%);
+    padding: 10em 1.75em 2em;
+    color: white;
+    font-size: 1.25em;
+}
 
 
-
-
-
+.grid-address{
+    display: grid;
+    grid-template-areas: 
+    'img1 content1'
+    'img2 content2'
+    'img3 content3';
+    gap: 1.5em;
+    
+}
+.location{
+    grid-area: img1;
+    align-self:center;
+}
+.phone{
+    grid-area: img2;
+    align-self: center;
+}
+.mail{
+    grid-area: img3;
+    align-self: center;
+}
+.lorem{
+    grid-area: content1;    
+}
+.phone-numb{
+    grid-area: content2;
+}
+.email{
+    grid-area: content3;
+}
+.icons{
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+}
+.copyright{
+    margin-top: 4em;
+    text-align: center;
+    font-size: 0.75rem;
+}
+.icons > i {
+    margin-right: 1em;
+}
 
 
 
@@ -187,22 +273,57 @@ header{
     }
     .exp{
         align-self: center;
-        padding: 0 em;
-    }
-    .exp > h3{
-        font-family:'Poppins', sans-serif ;
+        padding: 0 1em;
     }
     .exp > p{
         font-size: clamp(1rem, 1.5vw , 1.25rem);
     }
 
     /* section-end */
+     .box{
+        max-width: 50%;
+    }
+    .card > h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.25rem, 2.5vw, 3rem);
+    } 
+
+    /* footer-start */
+
+    .footer-content {
+        padding: 10em 5em 2em;
+    }
+     
+    .footer-grid{
+        display: grid;
+        grid-template-columns: 2fr repeat(3,1fr);
+        gap: 1em;
+    }
+    .icons{
+        padding-top: 1.25rem;
+        padding-right: 5em;
+
+    }
+    .copyright{
+        text-align: end;
+    }
 }
 
 @media (max-width:991.9px){
     .cta-div{
         text-align: center;
     }
+
+    .us{
+        margin-top: 2.5em;
+    }
+    .icons{
+        margin-top: 3em;
+        text-align: center;
+        padding: 0 6em;
+    }
+
 }
 
 
@@ -229,10 +350,3 @@ header{
 
 
 
-
-section{
-    grid-area: sec;
-}
-footer{
-    grid-area: foot;
-}
